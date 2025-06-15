@@ -1,0 +1,42 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cntc.css' %}">
+    {% endblock %}
+
+{% block title %}Contact me{% endblock %}
+
+{% block content %}
+    <article>
+        <section>
+            <h2> Contact me </h2>
+            <form action="" method="post">
+                {% csrf_token %}
+    
+                    <label for="email">Email:</label> <br>
+                    <input type="email" name="email" required> <br>
+
+                    <label for="message">Message:</label> <br>
+                    <input type="text" name="message" required> <br>
+
+                    <input type="submit" value="Send">
+            </form>
+        </section>
+        <section>
+            <h2> Other forms of contact</h2>
+                <a href="https://www.wattpad.com/user/jslaubsch3r" class="social-link" aria-label="Wattpad">
+                    <img src="{% static 'images/wattpad.svg'%}" alt="Wattpad" class="footer-icon">
+                </a>
+                <a href="https://www.instagram.com/j.s.laubscher?igsh=cXZzM2Z4b3lwenFv" class="social-link" aria-label="Instagram">
+                    <img src="{% static 'images/insta.svg'%}" alt="Instagram" class="footer-icon">
+                </a>
+                <a href="https://www.tiktok.com/@enchanted._roses?_t=ZM-8whOyr4NYN3&_r=1" class="social-link" aria-label="Tiktok">
+                    <img src="{% static 'images/tiktok.svg'%}" alt="Tiktok" class="footer-icon">
+                </a>
+
+        </section>
+    </article>
+{% endblock %}

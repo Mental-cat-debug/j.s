@@ -1,0 +1,158 @@
+/* Global Reset for this section */
+.news-container, .news-container * {
+    box-sizing: border-box;
+}
+
+/* Container */
+.news-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+}
+
+/* Page Title */
+.news-container h1 {
+    font-size: 2rem;
+    color: #A23E48;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Individual Post Block */
+.news-post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Post Title */
+.news-post h2 {
+    margin-top: 0;
+    color: #943f3f;
+}
+
+/* Post Metadata */
+.news-post .meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Post Content */
+.news-post p {
+    line-height: 1.6;
+}
+
+/* Like Button */
+.news-post form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.news-post form button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.news-post form button:hover img {
+    transform: scale(1.1);
+}
+
+/* Likes count */
+.likes-count {
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.3rem;
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 1rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.comments p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.comments p b {
+    color: #A23E48;
+}
+
+/* No comments */
+.comments p:last-child {
+    color: #888;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.comment-form textarea,
+.comment-form input[type="text"] {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.comment-form button {
+    align-self: flex-start;
+    background-color: #A23E48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #822c36;
+}
+
+/* Divider */
+.news-post hr {
+    margin-top: 2rem;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .news-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .news-post {
+        padding: 1rem;
+    }
+
+    .comment-form button {
+        width: 100%;
+    }
+
+    .news-post form button img {
+        width: 20px;
+        height: 20px;
+    }
+}

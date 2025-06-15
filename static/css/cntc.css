@@ -1,0 +1,95 @@
+/* General article styling */
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section headers */
+article h2 {
+    color: #A23E48;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+form input[type="email"],
+form input[type="text"] {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    
+}
+
+form input[type="text"]{
+    height: 200px;
+}
+
+form input[type="submit"] {
+    background-color: #A23E48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #822c36;
+}
+
+/* Social media links */
+.social-link {
+    display: inline-block;
+    margin-right: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.footer-icon {
+    width: 36px;
+    height: 36px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    article {
+        padding: 1.2rem;
+    }
+
+    .footer-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+}

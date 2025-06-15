@@ -1,0 +1,26 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/store.css' %}">
+    {% endblock %}
+
+{% block title %}Store{% endblock %}
+
+{% block content %}
+    <article>
+        <section>
+            <h2>Special editions</h2>
+            <h4>Only available in South Africa</h4>
+        </section>
+        <section>
+            <h2>Where to buy my books</h2>
+        </section>
+    </article>
+    <aside>
+        <nav>
+
+        </nav>
+    </aside>
+{% endblock %}

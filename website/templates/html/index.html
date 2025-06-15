@@ -1,0 +1,109 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% endblock %}
+
+{% block title %}J.S Laubscher{% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <article>
+            <section id="about">
+                <h2>About the author</h2>
+                <img src="{% static 'images/Author.jpg'%}" alt="Author :3">
+                <p><b>Hi! Im Jade, a teenage author who writes about love and Murder!</b></p>
+                <p>I started writing back in primary school as a hoby, I didnt know computers could
+                    be used and didnt have access to one so I wrote my own childrens books on paper by hand.
+                    I could give my sisters these books but they werent very good due to my lack of planning (Or spelling ability)
+                </p>
+                <p>I fell inlove with reading in high school, often planning my own stories I wanted to write and 
+                    even started off with a small catalog of privated novels on Wattpad (Mostly horror and murder mystery)
+                </p>
+                <p>At 15 I decided to write my first book, Enchanted Roses and as of now Im still working on it. 
+                    The goal of this website is to log my progress and get potential beta readers to help me out!
+                </p>
+            </section>
+            <section id="Upcomming">
+                <h2>Upcomming projects <img src="{% static 'images/book2.svg'%}"></h2>
+                <h3>Enchanted roses (Nov 2025)</h3>
+                <h5>Romance, Murder mystery, Royalty Novel</h5>
+                    <p>
+                        In a kingdom still healing from centuries of war, <strong>Princess Salem</strong> prepares to ascend the throne of Valenthea. 
+                        But just as peace seems within reach, an unexpected letter arrives — unsigned, poetic, and accompanied by a single rose.
+                    </p>
+                    <p>
+                        When her childhood friend and royal knight, <strong>Hunter Whitewood</strong>, returns from the frontlines, Salem enlists his help to uncover the identity of her secret admirer. 
+                        What begins as a light-hearted search soon takes a darker turn as a string of murders rocks the palace — each victim marked with the symbol of a fox.
+                    </p>
+                    <p>
+                        As Hunter investigates the growing threat of the elusive <strong>Fox Killer</strong>, he must also confront his feelings for Salem — feelings he’s buried for years beneath armor and duty. 
+                        Every clue pulls them closer, not only to the killer, but to each other.
+                    </p>
+                    <p>
+                        <em>Enchanted Roses</em> is a tale of royal secrets, forbidden love, and a mystery that could cost the crown. 
+                        In a court of masks and daggers, trust is fragile — and love might be the most dangerous risk of all.
+                    </p>
+                <h6>First book in the enchanted series</h6>
+
+                <h3>Enchanted Thorns (Dec 2026)</h3>
+                <h5>War story, Romance, Tragedy, Wuh luh wuh</h5>
+                    <p>
+                        In a war-torn corner of the world, <strong>Mary Whitewood</strong> fights for the freedom of her people — a soldier hardened by loss, loyalty, and the haunting memory of her fallen parents. 
+                        Serving in the <strong>Valenthean Military</strong>, she’s known for her quiet bravery and fierce devotion to her older brother, Hunter.
+                    </p>
+                    <p>
+                        As the <strong>Valenthean-Nazerian War</strong> rages into its tenth year, a young medic named <strong>Evelyn Raye</strong> is assigned to Mary’s unit. 
+                        Compassionate, defiant, and entirely unexpected, Evelyn begins to chip away at the walls Mary has built around her heart.
+                    </p>
+                    <p>
+                        What begins as guarded camaraderie slowly unfolds into something deeper — something dangerous in a time when love is a luxury no soldier can afford. 
+                        As battles intensify and casualties mount, Mary is forced to choose between vengeance and vulnerability, between duty and desire.
+                    </p>
+                    <p>
+                        <em>Enchanted Thorns</em> is a story of resistance, sacrifice, and forbidden love — and how even in the darkest moments, a single connection can spark light. 
+                        But war demands everything… and not every story ends in survival.
+                    </p>
+                <h6>Prequel-sequel to Enchanted roses</h6>
+            </section>
+            <section id="beta">
+                <h2>Beta reader Program</h2>
+                <h3>How to be part of the beta reader program?</h3>
+                <p>To be part of the Beta reader program all you need to do is fill in the 
+                    provided form on the co-responding webpage, from there I select elligible
+                    candidates and you will be emailed the book draft. You will than be tasked with 
+                    spotting errors in my writing and sending me back feedback</p>
+                <h3>Why be a beta reader?</h3>
+                <p>Being a beta reader has many perks such as:</p>
+                <ul>
+                    <li>Access to the books before release (For free might I add)</li>
+                    <li>Being able to directly communicate with the author</li>
+                    <li>Acknowledgement in the book, you can choose to be acknowledged as your name or a social media
+                        username (Since not everyone wants their name out there)</li>
+                    <li>Shout outs on my social media and personal thanks for helping out</li>
+                    <li>Possibility to have characters in future books named after or inspired by you</li>
+                </ul>
+                <p><b><u>Please note!!</u></b> Being a beta reader means <b>YOU MAY NEVER</b>, share unfinished work 
+                to <b>ANYONE</b>. If leaks ocour you will be imediatly removed from the program and I will be taking
+                <b>Legal action</b>. This is included in the <b>terms and conditions</b> you have to agree to inorder 
+                to be a beta reader.</p>
+                <a href="{% url 'beta' %}">Become a beta reader</a>
+            </section>
+        </article>
+
+        <aside>
+            <nav>
+            <h2>Navagation</h2>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Upcomming">Upcomming projects</a></li>
+                    <li><a href="#beta">Beta reader program</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+{% endblock %}

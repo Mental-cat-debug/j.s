@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <h1>J.S Laubscher</h1>
+        <nav class="Navbar">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'news' %}">News</a></li>
+            <li><a href="{% url 'contact' %}">Contact us</a></li>
+        </ul>
+        </nav>
+        <div class="profile-bar">
+    {% if user.is_authenticated %}
+        <span>Welcome, {{ user.username }}!</span>
+
+    {% else %}
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'signup' %}">Sign up</a>
+    {% endif %}
+</div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 J.S. Laubscher. All rights reserved. Website designed by <a href="mailto:jad3lbr@gmail.com">J.S Lauscher</a></p>
+    </footer>
+</body>
+</html>

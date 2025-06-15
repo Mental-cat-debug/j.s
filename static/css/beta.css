@@ -1,0 +1,122 @@
+/* Container styling */
+article {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headers */
+article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #A23E48;
+}
+
+article h3 {
+    margin-top: 2rem;
+    color: #943f3f;
+}
+
+article h6 {
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced vertical spacing between items */
+    margin-top: 1rem;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.1rem; /* Tighter spacing below label */
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+/* Inputs, selects, textareas */
+form input[type="text"],
+form input[type="date"],
+form input[type="email"],
+form input[type="tel"],
+form select {
+    padding: 0.4rem 0.6rem; /* Slightly smaller padding */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem; /* Tighter spacing below input */
+}
+
+/* Checkbox group styling */
+form input[type="checkbox"] {
+    margin-right: 0.4rem;
+    transform: scale(0.95); /* Slightly smaller checkbox */
+}
+
+form label input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+
+/* Submit button */
+form input[type="submit"] {
+    background-color: #A23E48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #822c36;
+}
+
+/* Terms & conditions link */
+form a {
+    color: #A23E48;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Terms section */
+#terms\&conditions {
+    margin-top: 3rem;
+    background-color: #f9f4f3;
+    padding: 2rem;
+    border-left: 4px solid #A23E48;
+    border-radius: 8px;
+}
+
+#terms\&conditions ul {
+    padding-left: 1.2rem;
+}
+
+#terms\&conditions li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    article {
+        padding: 1rem;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+}

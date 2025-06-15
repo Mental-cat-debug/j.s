@@ -1,0 +1,40 @@
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f4f3;
+            margin: 0;
+        }
+
+        h2 {
+            color: #A23E48;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f4f3;
+    margin: 0;
+}
+
+h2 {
+    color: #A23E48;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+}

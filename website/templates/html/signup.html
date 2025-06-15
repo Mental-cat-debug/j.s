@@ -1,0 +1,44 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% endblock %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+        <article>
+            <section id="signup">
+                <h2>Sign up</h2>
+                <form action="" method="post">
+                {% csrf_token %}
+                
+                <label for="usernamesn">Choose a username:</label>
+                <input type="text" name="username" placeholder="Username" id="usernamesn" required> <br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email@example.com" id="email" required> <br>
+
+                <label for="password1">Choose a password:</label>
+                <input type="password" name="password1" placeholder="Password" id="password1" required> <br>
+
+                <label for="password2">Confirm password:</label>
+                <input type="password" name="password2" placeholder="Confirm password" id="password2" required> <br>
+
+                <input type="submit" value="Sign Up">
+            </form>
+
+            <h3><a href="{% url 'login' %}">Already have an account? Log back in.</a></h3>
+            </section>
+        </article>
+{% endblock %}
+
+
+
+
+
+
+

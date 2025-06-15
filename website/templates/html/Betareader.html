@@ -1,0 +1,208 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/beta.css' %}">
+    {% endblock %}
+
+{% block title %}Become a beta reader{% endblock %}
+
+{% block content %}
+    <article>
+        <section>
+            <h2>Become a beta reader today!</h2>
+            <p>No cost, just sign up and give me feedback on the book!</p>
+            <form action="" method="post">
+                {% csrf_token %}
+                <label for="name">Name:</label> <br>
+                <input type="text" name="name" required> <br>
+                <label for="surname">Surname:</label> <br>
+                <input type="text" name="surname" required> <br>
+                <label for="Why">Why do you want to be a beta reader?</label> <br>
+                <input type="text" name="Why" required> <br>
+                <label for="gender">Gender</label> <br>
+                <select name="gender" required>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                    <option value="0">Other</option>
+                </select> <br>
+                <label for="date">Birthday</label> <br>
+                <input type="date" name="date" required> <br>
+                <label for="genres">Favorite Genre</label> <br>
+                <label><input type="checkbox" name="genres" value="Comedy">Comedy</label> <br>
+                <label><input type="checkbox" name="genres" value="Dystopia">Dystopia</label> <br>
+                <label><input type="checkbox" name="genres" value="Fantasy">Fantasy</label> <br>
+                <label><input type="checkbox" name="genres" value="Historical">Historical</label> <br>
+                <label><input type="checkbox" name="genres" value="Horror">Horror</label> <br>
+                <label><input type="checkbox" name="genres" value="Murder Mystery">Murder Mystery</label> <br>
+                <label><input type="checkbox" name="genres" value="Romance">Romance</label> <br>
+                <label><input type="checkbox" name="genres" value="Sci fi">Sci Fi</label> <br>
+                <label><input type="checkbox" name="genres" value="Thriller">Thriller</label> <br>
+                <label><input type="checkbox" name="genres" value="Tragedy">Tragedy</label> <br>
+                <label><input type="checkbox" name="genres" value="Young Adult">Young Adult</label> <br>
+                <label for="region">Region</label> <br>
+                <select name="region">
+                    <option value="Africa">Africa</option>
+                    <option value="Antartica">Antartica</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                </select> <br>
+                <label for="email">Email adress</label> <br>
+                <input type="email" name="email" placeholder="example@email.com" required> <br>
+                <label for="number">Phone number</label> <br>
+                <input type="tel" name="number" placeholder="000-000-0000" required> <br>
+                <label>
+                    <input type="checkbox" name="terms and conditions" required>
+                    I agree to the <a href="#terms&conditions">terms and conditions</a>
+</label>
+
+                <input type="submit" value="submit">
+            </form>
+        </section>
+        <section id="terms&conditions">
+            <h2>Beta Reader Agreement: Terms and Conditions</h2>
+            <h6>Last Updated: June 14, 2025</h6>
+            <h6>Effective Date: Upon Acceptance</h6>
+            <p>Thank you for participating in the beta reading program for J.S. Laubscher. 
+                By agreeing to become a beta reader, you acknowledge and agree to the following 
+                Terms and Conditions, which constitute a legally binding agreement between you 
+                ("Beta Reader") and the author, J.S. Laubscher ("Author").
+            </p>
+            <h3>1. Definition of Unreleased Work</h3>
+            <p>“Unreleased Work” includes, but is not limited to:</p>
+            <ul>
+                <li>
+                    Manuscripts, drafts, outlines, or excerpts not yet published or publicly
+                    available
+                </li>
+                <li>
+                    Character designs, world-building details, maps, appendices, and supplementary 
+                    content
+                </li>
+                <li>
+                    Any related files or discussions disclosed for the purpose of beta reading
+                </li>
+            </ul>
+            <h3>2. Copyright & Intellectual Property</h3>
+                <p>All materials shared with you are the exclusive intellectual property of J.S. 
+                    Laubscher and are protected under: </p>
+                <ul>
+                    <li>
+                        Berne Convention for the Protection of Literary and Artistic Works (1886)
+                    </li>
+                    <li>
+                        World Intellectual Property Organization (WIPO) regulations
+                    </li>
+                    <li>
+                        Copyright Act of 1978 (South Africa) or your respective country’s national copyright laws
+                    </li>
+                </ul>
+                <p>You acknowledge that all rights, including moral rights, remain with the Author 
+                    and that you gain no ownership or publication rights through your participation.
+                </p>
+            <h3>3. Confidentiality Agreement</h3>
+                <p>By accepting these terms, you agree to treat all Unreleased Work as confidential and agree 
+                not to:</p>
+                <ul>
+                <li>
+                    Share, copy, forward, or reproduce any part of the Work
+                </li>
+                <li>
+                    Discuss plot details, character arcs, or sensitive information with anyone outside 
+                    the beta reading program
+                </li>
+                <li>
+                    Save or store the Work on shared or public platforms (e.g., Google Drive, Dropbox) 
+                    unless explicitly approved by the Author
+                </li>
+            </ul>
+            <h3>4. Prohibited Actions</h3>
+                <p>The following actions are strictly forbidden:</p>
+                <ul>
+                    <li>
+                        Selling or distributing the Unreleased Work in any form
+                    </li>
+                    <li>
+                        Uploading any portion of the Work to public forums, websites, or 
+                        file-sharing services
+                    </li>
+                    <li>
+                        Providing access to the Work to any third party
+                    </li>
+                    <li>
+                        Plagiarizing or claiming any part of the Work as your own
+                    </li>
+                </ul>
+                <p>Any such action will be considered a serious breach of this agreement and of 
+                international copyright law.</p>
+            <h3>5. Legal Enforcement & Remedies</h3>
+                <p>If you violate these Terms, the Author reserves the right to take legal action, 
+                    which may include but is not limited to: </p>
+                <ul>
+                    <li>
+                        Filing a civil claim for damages under applicable copyright and contract 
+                        laws
+                    </li>
+                    <li>
+                        Seeking an injunction to prevent further distribution
+                    </li>
+                    <li>
+                        Pursuing criminal charges in accordance with national and international 
+                        IP law
+                    </li>
+                </ul>
+
+                <p>The Author may also pursue legal remedies for breach of confidentiality, including 
+                    under South African law (if applicable), and international data protection 
+                    regulations.
+                </p>
+            <h3>6. Beta Reader Rights</h3>
+            <p>As a beta reader, you:</p>
+                <ul>
+                    <li>
+                        Are entitled to read and privately respond to the Work for feedback purposes only
+                    </li>
+                    <li>
+                        May withdraw from the beta reading program at any time, but must delete or destroy all copies of the Work immediately upon withdrawal or program completion
+                    </li>
+                    <li>
+                        May report any accidental leaks or breaches promptly to avoid liability
+                    </li>
+                </ul>
+
+            <h3>7. Governing Law</h3>
+                <p>This agreement shall be governed by and construed in accordance with the laws of:</p>
+                <ul>
+                    <li>
+                        The Republic of South Africa, unless otherwise agreed in writing
+                    </li>
+                    <li>
+                        International copyright and intellectual property law, where applicable
+                    </li>
+                </ul>
+                <p>Disputes arising from these Terms will be subject to the exclusive jurisdiction of 
+                    the South African courts, or another mutually agreed legal authority.
+                </p>
+            <h3>8. Acceptance</h3>
+            <p>By participating in the beta reading program, you confirm that:</p>
+            <ul>
+                <li>
+                    You have read and understood these Terms & Conditions
+                </li>
+                </li>
+                    You agree to be legally bound by them
+                </li>
+                    You will uphold the integrity and confidentiality of J.S. Laubscher’s work
+                </li>   
+            </ul>
+            <p>If you do not agree, you must immediately cease all reading activity and delete all 
+                materials provided.</p>
+            <h6>For questions or reporting of issues, please contact: <a href="mailto:jad3lbr@gmail.com">jad3lbr@gmail.com</a></h6>
+        </section>
+    </article>
+{% endblock %}

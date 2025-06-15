@@ -1,0 +1,36 @@
+{% extends 'html/layout.html' %}
+
+{% load static %}
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% endblock %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+    <article>
+        <section id="login">
+            <h2>Sign in</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required><br>
+
+                <input type="submit" value="Login">
+            </form>
+
+            <!-- Optional error message display -->
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color:red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        <h3><a href="{% url 'signup' %}">Dont have an account? Sign up for free!</a></h3>
+
+    </article>
+{% endblock %}
